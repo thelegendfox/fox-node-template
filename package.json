@@ -1,0 +1,20 @@
+{
+	"scripts": {
+		"start": "tsx",
+		"dev": "tsx watch -r dotenv/config ./src/index.ts dotenv_config_path=./.env.dev",
+		"check": "pnpm exec biome check",
+		"lint": "pnpm exec biome lint",
+		"lint-fix": "pnpm exec biome lint --write",
+		"format": "pnpm exec biome format",
+		"setup": "pnpm i && touch .env .env.dev && mkdir builds"
+	},
+	"dependencies": {
+		"dotenv": "^17.2.3"
+	},
+	"type": "module",
+	"devDependencies": {
+		"typescript": "^5.9.3",
+		"@biomejs/biome": "^2.2.7",
+		"jiti": "^2.6.1"
+	}
+}
